@@ -1,0 +1,139 @@
+\hypertarget{interfaces_8h_source}{}\doxysection{interfaces.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INTERFACES\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INTERFACES\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dominios_8h}{dominios.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entidades_8h}{entidades.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}comandos.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Declarações\ adiantadas.}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_l_n_autenticacao}{ILNAutenticacao}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_l_n_projeto}{ILNProjeto}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_l_n_gerente}{ILNGerente}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_l_n_desenvolvedor}{ILNDesenvolvedor}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ Declarações\ de\ serviços\ na\ camada\ de\ apresentação}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ Declaração\ de\ interface\ para\ serviço de\ autenticação\ na\ camada\ de\ apresentação.}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_u_autenticacao}{IUAutenticacao}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Método\ por\ meio\ do\ qual\ é solicitada\ autenticacao.}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoAutenticacao\ autenticar()\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Método\ por\ meio\ do\ qual\ é estabelecida\ ligação\ (link)\ com\ a\ controladora\ de\ negócio.}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setCntrLNAutenticacao(\mbox{\hyperlink{class_i_l_n_autenticacao}{ILNAutenticacao}}\ *)\ =\ 0;}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ Declaração\ de\ interface\ para\ serviço de\ projeto\ na\ camada\ de\ apresentação.}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_u_projeto}{IUProjeto}}\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Método\ por\ meio\ do\ qual\ é solicitada\ autenticacao.}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ executar(\textcolor{keyword}{const}\ Matricula\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Método\ por\ meio\ do\ qual\ é estabelecida\ ligação\ (link)\ com\ a\ controladora\ de\ negócio.}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setCntrLNProjeto(\mbox{\hyperlink{class_i_l_n_projeto}{ILNProjeto}}\ *)\ =\ 0;}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ Declaração\ de\ interface\ para\ serviço de\ gerente\ na\ camada\ de\ apresentação.}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_u_gerente}{IUGerente}}\ \{}
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ Método\ por\ meio\ do\ qual\ é solicitada\ autenticacao.}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ executar(\textcolor{keyword}{const}\ Matricula\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ Método\ por\ meio\ do\ qual\ é estabelecida\ ligação\ (link)\ com\ a\ controladora\ de\ negócio.}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setCntrLNGerente(\mbox{\hyperlink{class_i_l_n_gerente}{ILNGerente}}\ *)\ =\ 0;}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ Declaração\ de\ interface\ para\ serviço de\ desenvolvedor\ na\ camada\ de\ apresentação.}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_u_desenvolvedor}{IUDesenvolvedor}}\ \{}
+\DoxyCodeLine{00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Método\ por\ meio\ do\ qual\ é solicitada\ autenticacao.}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ executar(\textcolor{keyword}{const}\ Matricula\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ Método\ por\ meio\ do\ qual\ é estabelecida\ ligação\ (link)\ com\ a\ controladora\ de\ negócio.}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setCntrLNDesenvolvedor(\mbox{\hyperlink{class_i_l_n_desenvolvedor}{ILNDesenvolvedor}}*)\ =\ 0;}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{//\ Declarações\ de\ serviços\ na\ camada\ de\ negócio}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{comment}{//\ Declarações\ de\ interfaces\ para\ serviços\ na\ camada\ de\ negócio.}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ Declaração\ de\ interface\ para\ o\ serviço de\ autenticação\ na\ camada\ de\ negócio.}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_l_n_autenticacao}{ILNAutenticacao}}\ \{}
+\DoxyCodeLine{00085\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoAutenticacao\ autenticar(\textcolor{keyword}{const}\ Matricula\&,\ \textcolor{keyword}{const}\ Senha\&)\ \textcolor{keywordflow}{throw}(runtime\_error)=\ 0;}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{comment}{//\ Declaração\ de\ interface\ para\ o\ serviço de\ projeto\ na\ camada\ de\ negócio.}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_l_n_projeto}{ILNProjeto}}\ \{}
+\DoxyCodeLine{00092\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoProjeto\ incluir(\textcolor{keyword}{const}\ Projeto\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoProjeto\ remover(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_codigo}{Codigo}}\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoProjeto\ pesquisar(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_codigo}{Codigo}}\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoProjeto\ editar(\textcolor{keyword}{const}\ Projeto\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{comment}{//\ Declaração\ de\ interface\ para\ o\ serviço de\ gerente\ na\ camada\ de\ negócio.}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_l_n_gerente}{ILNGerente}}\ \{}
+\DoxyCodeLine{00102\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoGerente\ incluir(\textcolor{keyword}{const}\ Gerente\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoGerente\ remover(\textcolor{keyword}{const}\ Matricula\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoGerente\ pesquisar(\textcolor{keyword}{const}\ Matricula\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoGerente\ editar(\textcolor{keyword}{const}\ Gerente\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{comment}{//\ Declaração\ de\ interface\ para\ o\ serviço de\ desenvolvedor\ na\ camada\ de\ negócio.}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_l_n_desenvolvedor}{ILNDesenvolvedor}}\ \{}
+\DoxyCodeLine{00112\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoGerente\ incluir(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_desenvolvedor}{Desenvolvedor}}\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoGerente\ remover(\textcolor{keyword}{const}\ Matricula\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoGerente\ pesquisar(\textcolor{keyword}{const}\ Matricula\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{virtual}\ ResultadoGerente\ editar(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_desenvolvedor}{Desenvolvedor}}\&)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00117\ \};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{comment}{//\ Declrações\ de\ serviços\ na\ camada\ de\ persistência.}}
+\DoxyCodeLine{00120\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_persistencia}{IPersistencia}}\ \{}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//\ Método\ por\ meio\ do\ qual\ é solicitada\ execução\ de\ comando.}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//\ Observe\ que\ o\ parâmetro\ é um\ ponteiro\ para\ a\ classe\ no\ topo\ da\ hierarquia\ de\ comandos.}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ executar(\textcolor{keyword}{const}\ ComandoBancoDados*)\ \textcolor{keywordflow}{throw}(runtime\_error)\ =\ 0;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INTERFACES\_H\_INCLUDED}}
+
+\end{DoxyCode}

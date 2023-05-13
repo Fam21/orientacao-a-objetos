@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1683846613 source:c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\exemploscodigos (1)\exemploscodigos\exemplo-02-estruturas-de-dominio-de-entidade-e-teste-de-unidade\main.cpp
+	<iostream>
+	"dominios.h"
+	"entidades.h"
+	"testes.h"
+	"testesDominio.h"
+
+1683852918 c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\exemploscodigos (1)\exemploscodigos\exemplo-02-estruturas-de-dominio-de-entidade-e-teste-de-unidade\dominios.h
+	<stdexcept>
+
+1683854451 c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\exemploscodigos (1)\exemploscodigos\exemplo-02-estruturas-de-dominio-de-entidade-e-teste-de-unidade\entidades.h
+	<string>
+
+1683854448 c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\exemploscodigos (1)\exemploscodigos\exemplo-02-estruturas-de-dominio-de-entidade-e-teste-de-unidade\testes.h
+	"entidades.h"
+
+1683852918 c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\exemploscodigos (1)\exemploscodigos\exemplo-02-estruturas-de-dominio-de-entidade-e-teste-de-unidade\testesdominio.h
+
+1683854098 source:c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\exemploscodigos (1)\exemploscodigos\exemplo-02-estruturas-de-dominio-de-entidade-e-teste-de-unidade\testes.cpp
+	<iostream>
+	<cassert>
+	"testes.h"
+	"entidades.h"
+
+1683854331 source:c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\exemploscodigos (1)\exemploscodigos\exemplo-02-estruturas-de-dominio-de-entidade-e-teste-de-unidade\testesdominio.cpp
+	"testesDominio.h"
+	"dominios.h"
+	<iostream>
+	<cassert>
+
+1683987718 source:c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\t1-tp1-190087161\dominios.cpp
+	"dominios.h"
+	<iostream>
+
+1683987718 c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\t1-tp1-190087161\dominios.h
+	<stdexcept>
+
+1683987718 source:c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\t1-tp1-190087161\entidades.cpp
+	<stdexcept>
+	<iostream>
+	<unordered_set>
+	"entidades.h"
+
+1683987718 c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\t1-tp1-190087161\entidades.h
+	<string>
+
+1683987714 source:c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\t1-tp1-190087161\main.cpp
+	<iostream>
+	"dominios.h"
+	"entidades.h"
+	"testes.h"
+	"testesDominio.h"
+
+1683987718 c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\t1-tp1-190087161\testes.h
+	"entidades.h"
+
+1683987718 c:\users\filip\onedrive\documents\햞ea de trabalho\estudos\unb\tp1\t1-tp1-190087161\testesdominio.h
+
